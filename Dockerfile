@@ -5,7 +5,7 @@ COPY package*.json ./
 RUN npm install
 
 # Stage 2: Run (Optimized)
-FROM node:18-experimental-fetch-alpine 
+FROM node:18-alpine 
 # Isse image size bahut chota ho jayega
 WORKDIR /app
 COPY --from=build /app/node_modules ./node_modules
